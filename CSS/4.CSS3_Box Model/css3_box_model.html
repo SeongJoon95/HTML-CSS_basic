@@ -10,25 +10,37 @@
 
         /* 
             박스모델 : 
-                - 
-                - 
+                - 모든 HTML 요소는 박스 형태의 사격형 영역을 가지고 있음
+                - HTML 박스 모델이라 하고 컨텐츠, 패딩, 보더, 마진으로 이루어져 있음
             
-                - 
-                - 
-                - 
-                - 
+                - 컨텐츠 (contents) : 요소의 실제 텍스트나 이미지가 위치하는 영역
+                - 패딩 (padding) : 테두리 안쪽에 위치한 요소의 내부 여백(컨텐츠와 테두리의 간격)
+                - 보더 (border) : 테두리 영역
+                - 머잔 (margin) : 테두리 바깥쪽에 위치한 요소의 외부 여백(테두리와 다른 요소간의 간격)
 
-                - 
+                - 박스 모델의 컨텐츠, 패딩, 보더, 마진의 속성 값은 상속되지 않음
         */
 
         /*
             width / height :
-                - 
-                - 
-                - 
-                - 
+                - 요소의 너비와 높이를 지정하기 위해 사용
+                - 기본적으로 컨텐츠 영역을 대상으로 사이즈를 지정
+                - width, height 속성으로 지정한 사이즈가 실제 켄텐츠보다 작다면 컨텐츠가 넘침
+                - overflow 속성으로 넘친 컨텐츠를 조절할 수 있음
         */
+        .width-height-1 {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
 
+        .width-height-2 {
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            overflow: auto;
+
+        }
         /*
             width와 height가 실제 전체 박스 크기를 지정하지 않음을 주의
                 - 전체 너비 : width + left padding + right padding + left border + right border + left margin + right margin
@@ -36,16 +48,43 @@
         */
 
         /*
-            max / min - width / height : 
+            max / min - width / height : 컨텐츠의 (최대, 최소) (너비, 높이)를 지정할 수 있음
         */
-
+        .min-max {
+            width : 50vw;
+            min-width: 300px;
+            max-width: 600px;
+            height: 50vh;
+            min-height: 150px;
+            max-height: 300px;
+            background-color: crimson;
+        }
 
 
         /*
-            margin / padding :
-                - 
+            margin / padding :  margin : 바깥쪽 테두리 padding은 안쪽 테두리
+                - 마진과 패딩은 컨텐츠 기준으로 4개 방향 (top, right, bottom, left)에 대해서 지정 가능
         */
-        
+        .margin-padding-1 {
+            border: 5px solid red;
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            
+            /* margin : 테두리 바깥쪽 */
+            margin-top: 40px;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+        .margin-padding-2 {
+            border: 5px solid blue;
+            /* padding: 10px 20px 30px 40px;
+            margin: 40px 30px 20px 10px; */
+            padding: 40px;
+            margin: 40px;
+        } 
 
         /*
             margin[padding] : 상 우 하 좌;
@@ -140,7 +179,7 @@
 
     <div class="width-height-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
     <div class="width-height-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-
+    <div class="min-max"></div>
     <hr />
 
     <div class="margin-padding-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
