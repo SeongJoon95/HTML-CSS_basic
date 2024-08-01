@@ -11,16 +11,25 @@
         /* 구글 폰트 : https://fonts.google.com/?subset=korean&noto.script=Kore */
 
         /*
-            CDN 링크 방식 : 
+            CDN 링크 방식 : @import 방식으로 웹 폰트를 다운받아 사용
         */
-        
-
+        @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+        .MoiraiOne{
+            font-family: "Moirai One";
+        }
 
         /*
-            서버 폰트 로딩 방식 : 
+            서버 폰트 로딩 방식 : @font-face 방식으로 웹 폰트를 등록해서 사용
         */
-        
-
+        @font-face {
+            font-family: 'EF_jejudoldam';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .EF_jejudoldam{
+            font-family: 'EF_jejudoldam';
+        }
 
     </style>
 
@@ -28,8 +37,8 @@
 <body>
     
     <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-    <h2 class="nanum-gothic">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-    <h2 class="pretendard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2 class="MoiraiOne">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2 class="EF_jejudoldam">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 
 </body>
 </html>
