@@ -11,6 +11,8 @@
 
     /* 변수처럼 지정 가능 */
     --primary-color:rgba(0,192,122,1);
+    --primary-10-color:rgba(0,192,122,0.1);
+    --primary-20-color:rgba(0,192,122,0.2);
     --error-color:rgba(255, 84, 64, 1);
     --gray-color:rgba(138, 146, 166, 1);
     --dark-gray-color:rgba(64, 64, 64, 1);
@@ -37,8 +39,15 @@ body{
     color: var(--gray-color);
 }
 
+.input-box .input-area{
+    display: flex;
+    gap: 10px;
+}
+
 /* 아이디와 비밀번호 입력한 값에 대한 작업 */
 .input-box input{
+    flex: 1;
+
     background: none;
     border: none;
     outline: none; /* 커서로 클릭했을시 테두리 안생기가 하는것 */
@@ -61,6 +70,35 @@ input::placeholder {
     color: var(--gray-color);
 }
 
+.input-box .input-button{
+    /* background-color: var(--primary-color); */
+    border-radius: 6px;
+    width: 110px;
+    padding: 8px 0;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 175%;
+    color: var(--gray-color);
+}
+
+.input-button.disable {
+    background-color: rgba(238, 238, 238, 1);
+    color: var(--gray-color);
+}
+
+.input-button.active {
+    background-color: var(--primary-10-color);
+    color: var(--primary-color);
+}
+
+.input-button.active:hover {
+    background-color: var(--primary-20-color);
+    cursor: pointer;
+}
+
+
 /* 아이디 및 비번 입력했을시 오류인지 아닌지 나타내주는 박스 */
 .input-box .message {
     margin-top: -4px;
@@ -82,11 +120,9 @@ input::placeholder {
 }
 
 /* 로그인 */
-.primary-button {
+.button {
     border-radius: 6px;
     padding: 8px 24px;
-    
-    background-color: var(--primary-color);
     
     font-size: 16px;
     font-weight: 400;
@@ -96,9 +132,22 @@ input::placeholder {
     color: rgba(255, 255, 255, 1);
 }
 
-.primary-button:hover {
+.button:hover {
     opacity: 0.9;
     cursor: pointer;
+}
+
+.button.primary{
+    background-color: var(--primary-color);
+}
+
+.button.disable {
+    background-color: var(--gray-color);
+}
+
+.disable:hover {
+    opacity: 1;
+    cursor: default;
 }
 
 .full-width {
@@ -146,6 +195,11 @@ input::placeholder {
 .sns-button:hover {
     opacity: 0.6;
     cursor: pointer;
+}
+
+.sns-button.md {
+    width: 40px;
+    height: 40px;
 }
 
 /* 클래스 뒤에 띄운뒤 '.'을 찍으면 자손이고 붙여서 '.'을 찍으면 같은 class를 의미함 */

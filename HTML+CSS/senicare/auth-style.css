@@ -1,5 +1,5 @@
 /* 전체 */
-#sign-in-wrapper {
+#auth-wrapper {
     display: flex;
     
     width: 100%;
@@ -9,7 +9,7 @@
 }
 
 /* 이미지 */
-.sign-in-image {
+.auth-image {
     width: 830px;
     /* background-color: rgba(0,255,0,0.4); */
     background-image: url(./images/main-image.png);
@@ -17,7 +17,7 @@
 }
 
 /* 로그인 */
-.sign-in-container{
+.auth-container{
     flex: 1px;
 
     display: flex;
@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-.sign-in-box{
+.auth-box{
     display: flex;
     flex-direction: column;
     align-items: center;
