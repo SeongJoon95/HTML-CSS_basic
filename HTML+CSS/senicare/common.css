@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moirai+One&display=swap');
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+
+    /* 변수처럼 지정 가능 */
+    --primary-color:rgba(0,192,122,1);
+    --error-color:rgba(255, 84, 64, 1);
+    --gray-color:rgba(138, 146, 166, 1);
+    --dark-gray-color:rgba(64, 64, 64, 1);
+    --default-color:rgba(35,45,66,1);
+}
+
+body{
+    margin: 0px;
+    font-family: 'Pretendard', sans-serif;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    /* background-color: burlywood; */
+}
+
+.input-box .label {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+
+/* 아이디와 비밀번호 입력한 값에 대한 작업 */
+.input-box input{
+    background: none;
+    border: none;
+    outline: none; /* 커서로 클릭했을시 테두리 안생기가 하는것 */
+
+    border: 1px solid rgba(238, 238, 238,1);
+    border-radius: 6px;
+    padding: 8px 16px;
+
+    background-color: rgba(255, 255, 255,1);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 175%;
+    color: var(--default-color);
+}
+
+/* placeholder에 대한 스타일을 따로 지정해줄 수 있음 */
+input::placeholder {
+    color: var(--gray-color);
+}
+
+/* 아이디 및 비번 입력했을시 오류인지 아닌지 나타내주는 박스 */
+.input-box .message {
+    margin-top: -4px;
+    height: 16px;
+    /* background-color: blue; */
+
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* 아이디, 비번에 관해 */
+.message.error {
+    color: var(--error-color);
+}
+
+/* 인증번호에 관해 */
+.message.primary {
+    color: var(--primary-color);
+}
+
+/* 로그인 */
+.primary-button {
+    border-radius: 6px;
+    padding: 8px 24px;
+    
+    background-color: var(--primary-color);
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 175%;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+.primary-button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.full-width {
+    width: 100%;
+    /* border 박스 기준으로 해야 함 컨텐츠 박스 기준으로 하면 margin때문에 튀어나감 */
+    box-sizing: border-box;
+}
+
+.link{
+    /* align-self을 center로 잡으면 해당 글자만 이벤트가 먹음 */
+    align-self: center;
+
+    /* text-align으로 잡으면 link 박스 전체를 지정하게 됨 */
+    /* text-align: center; */
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 175%;
+
+
+    color: rgba(113, 113, 113, 1);
+
+}
+
+.link:hover{
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.divider {
+    width: 100%;
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
+}
+
+.sns-button {
+    border-radius: 50%;
+
+    width: 56px;
+    height: 56px;
+
+    background-size: 100% 100%;
+
+}
+
+.sns-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* 클래스 뒤에 띄운뒤 '.'을 찍으면 자손이고 붙여서 '.'을 찍으면 같은 class를 의미함 */
+.sns-button.kakao {
+    /* background-color: yellow; */
+    background-image: url(./images/kakao-button.png);
+}
+.sns-button.naver {
+    /* background-color: green; */
+    background-image: url(./images/naver-button.png);
+}

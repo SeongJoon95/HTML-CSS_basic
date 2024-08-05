@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시니케어</title>
+    
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <!-- 메인을 기준으로 하나씩 쪼개가면서 만들어주는게 point임 -->
+    <div id="sign-in-wrapper">
+        <div class="sign-in-image"></div> <!-- 1. 이미지 -->
+        <div class="sign-in-container"> <!-- 2. 로그인 -->
+            <div class="sign-in-box"> <!-- 2-1 로그인박스 -->
+                <div class="title-box"><!-- 2-1-1 타이틀 박스 -->
+                    <div class="title">시니케어</div> <!-- 2-1-1-1 타이블 -->
+                    <div class="logo"></div> <!-- 2-1-1-2 로고 -->
+                </div>
+                <div class="input-container"> <!-- 2-1-2 로그인  -->
+                    <div class="input-box"> <!-- 2-1-2-1 아이디  -->
+                        <div class="label">아이디</div>
+                        <input type="text" placeholder="아이디를 입력해주세요." />
+                        <div class="message"></div>
+                    </div>
+                    <div class="input-box"> <!-- 2-1-2-2 비밀번호 -->
+                        <div class="label">비밀번호</div>
+                        <input type="password" placeholder="비밀번호를 입력해주세요." />
+                        <div class="message error">로그인 정보가 일치하지 않습니다.</div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <div class="primary-button full-width">로그인</div>
+                    <div class="link">회원가입</div>
+                </div>
+                <div style="width: 64px;" class="divider"></div>
+                <div class="sns-container">
+                    <div class="title">SNS 로그인</div>
+                    <div class="sns-button-container">
+                        <div class="sns-button kakao"></div>
+                        <div class="sns-button naver"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
