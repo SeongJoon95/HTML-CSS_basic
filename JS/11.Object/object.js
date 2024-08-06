@@ -131,11 +131,20 @@ var soonJong = goJong;
 
 // 중괄호를 쳐서 만들었기 때문에 새로운 객체가 생성됨
 // 깊은 복사 = 속성을 복사 
-soonJong = {
-    name: goJong.name,
-    age: goJong.age,
-    address: goJong.address
-};
-soonJong.name = '이척';
+// soonJong = {
+//     name: goJong.name,
+//     age: goJong.age,
+//     address: goJong.address
+// };
+// soonJong.name = '이척';
+
+// var soonJong = {};
+// for(var key in goJong){
+//     soonJong[key] = goJong[key];
+// }
+// soonJong.name ='이척';
+
+var soonJong = { ...goJong };
+soonJong.name='이척';
 console.log(soonJong);
 console.log(goJong);
