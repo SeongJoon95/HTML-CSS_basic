@@ -5,9 +5,9 @@
     - 특정 기능이나 코드 구문에 대하여 이름을 부여하는 용도
     - 특정 작업들에 대해서 모듈화를 위한 용도로 사용할 수 있음
 */
-// function add(a, b){
-//     return a + b;
-// }
+function add(a, b){
+    return a + b;
+}
 
 // var result = add(10, 20);
 // console.log(result);
@@ -18,18 +18,18 @@
 /*
 - 기명 함수 표현식
 */
-// var func1 = add;
-// var func1 = add();
+var func1 = add;
+// var func1 = add(); // 잘못된 표현식
 
-// var result = func1(99,99);
-// console.log(result);
-// result = add(100,100);
-// console.log(result);
+var result = func1(99,99);
+console.log(result);
+result = add(100,100);
+console.log(result);
 
-// var func2 = function add2 (a, b) {
-//     console.log(a+b);
-// }
-// func2(-10,-20);
+var func2 = function add2 (a, b) {
+    console.log(a+b);
+}
+func2(-10,-20);
 // 기명 함수 형태로 작성한 함수 표현식은 해당 함수명으로 호출이 불가능
 // add2(-10, -30);
 
@@ -55,7 +55,8 @@ function pre1 (data){
 }
 
 add3(pre1 ,10, 20);
-add3(function (data) {return -data}, 10, 20)
+// add3(function (data) {return -data}, 10, 20)
+add3(function (data) {return +data}, 10, 20)
 
 function func4() {
     
