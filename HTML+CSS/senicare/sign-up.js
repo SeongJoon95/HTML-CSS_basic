@@ -43,9 +43,9 @@ var signUpButtonElement = document.getElementById('sign-up-button');
 var userName ='', userId='', userPassword='', userPasswordCheck='', userTelnumber='', authNumber='';
 var isDuplicatedId = true, isPasswordMatch = false, isEqualPassword = false, isSendTel = false , isTelAuth = false;
 
-// 회원가입할때 일치할 경우
 var isPossible = false;
 
+// 회원가입할때 일치할 경우
 function checkPossible (){
     var isAllEnter = userName && userId && userPassword && userPasswordCheck && userTelnumber && authNumber;
     var isAllCondition = !isDuplicatedId && isPasswordMatch && isEqualPassword && isSendTel && isTelAuth;
@@ -55,8 +55,11 @@ function checkPossible (){
     else signUpButtonElement.className='button disable full-width';
 }
 
+// ----------------------------------------------------------------------------------------
+// 이름 작성 여부
 function userNameInputHandler (event) {
-    userName =event.target.value;
+    // 사용자가 입력한 input값을 받을수 있다 == event.target.value
+    userName = event.target.value;
     
     if (userName){
         userNameMessageElement.textContent='';
@@ -88,6 +91,7 @@ function userIdInputHandler (event) {
     checkPossible();
 }
 
+// 중복 Id check 함수 
 function userIdButtonClickHandler(event) {
     if(!userId) return;
 
@@ -107,8 +111,8 @@ function userIdButtonClickHandler(event) {
 }
 
 userIdElement.addEventListener('input', userIdInputHandler);
-
 userIdButtonElement.addEventListener('click', userIdButtonClickHandler);
+
 // ----------------------------------------------------------------------------------------------
 // 비밀번호체크 및 일치 확인여부
 
