@@ -9,49 +9,56 @@
     <link rel="stylesheet" href="./auth-style.css" />
 </head>
 <body>
-    <!-- 메인을 기준으로 하나씩 쪼개가면서 만들어주는게 point임 -->
-    <div id="auth-wrapper"> <!-- 1. 하나의 큰 컨테이너 생성 -->
-        <div class="auth-image"></div> <!-- 1-1. 이미지 -->
-        <div class="auth-container"> <!-- 2-1. 로그인 -->
-            <div class="auth-box"> <!-- 로그인박스 -->
-                <div class="title-box"><!-- 타이틀 박스 -->
-                    <div class="title">시니케어</div> <!-- 타이블 -->
-                    <div class="logo"></div> <!-- 로고 -->
+    <div id="auth-wrapper">
+
+        <div class="auth-image"></div> 
+
+        <div class="auth-container">
+            <div class="auth-box"> 
+
+                <!-- 1. 타이틀 -->
+                <div class="title-box">
+                    <div class="title">시니케어</div>
+                    <div class="logo"></div>
                 </div>
-                <div class="input-container"> <!-- 정보입력 박스  -->
-                    <div class="input-box"> <!-- 아이디입력박스  -->
-                        <div class="label">아이디</div> <!-- 아이디 입력 -->
+
+                <!-- 2. 정보입력 -->
+                <div class="input-container">
+                    <div class="input-box">
+                        <div class="label">아이디</div>
                         <div class="input-area">
                             <input id="user-id" type="text" placeholder="아이디를 입력해주세요." />
                         </div>
-                        <div class="message"></div> <!-- 여분공간 박스 -->
+                        <div class="message"></div> 
                     </div>
-                    <div class="input-box"> <!-- 비밀번호입력 박스 -->
-                        <div class="label">비밀번호</div> <!-- 비밀번호 입력 -->
+                    <div class="input-box">
+                        <div class="label">비밀번호</div> 
                         <div class="input-area">
                             <input id="user-password" type="password" placeholder="비밀번호를 입력해주세요." />
                         </div>
                         <div id="message" class="message error"></div>
                     </div>
                 </div>
+                <!-- 3. 버튼클릭  -->
                 <div class="button-container"> 
-                    <!-- <div class="button disable full-width">로그인</div> -->
                     <div id="sign-in-button" class="button primary full-width">로그인</div>
                     <div class="link" onclick="location.href='./sign-up.html'">회원가입</div>
                 </div>
                 <div style="width: 64px;" class="divider"></div>
+
+                <!-- 4. open api -->
                 <div class="sns-container">
                     <div class="title">SNS 로그인</div>
                     <div class="sns-button-container">
                         <a href="https://kakao.com" target="_blank">
                             <div class="sns-button kakao"></div>
                         </a>
-
-                        <a href="https://naver.com">
+                        <a href="https://naver.com" target="_blank">
                             <div class="sns-button naver"></div>
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

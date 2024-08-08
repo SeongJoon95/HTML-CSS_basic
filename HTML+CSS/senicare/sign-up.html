@@ -25,8 +25,12 @@
                     <div class="sns-container">
                         <div class="title">SNS 회원가입</div>
                         <div class="sns-button-container">
-                            <div class="sns-button md kakao"></div>
-                            <div class="sns-button md naver"></div>
+                            <a href="https://kakao.com" target="_blank">
+                                <div class="sns-button md kakao"></div>
+                            </a>
+                            <a href="https://naver.com" target="_blank">
+                                <div class="sns-button md naver"></div>
+                            </a>
                         </div>
                     </div>
 
@@ -76,7 +80,7 @@
                             <div id="user-telnumber-message" class="message"></div> 
                         </div>
                         
-                        <div class="input-box"> 
+                        <div id="auth-number-box" class="input-box" style="display: none;"> 
                             <div class="label">인증번호</div> 
                             <div class="input-area">
                                 <input id="auth-number" type="text" placeholder="인증번호 4자리를 입력해주세요." />
