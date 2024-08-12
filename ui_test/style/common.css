@@ -1,0 +1,159 @@
+@font-face {
+    font-family: kakao;
+    src: url(/ui_test/resource/font/KakaoOTFRegular.otf);
+
+}
+
+body {
+    font-family: kakao, sans-serif;
+    margin: 10;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header-1 {
+    width: 1712px;
+    height: 85px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.header-1{
+    background-color: #f3f3f3;
+
+    margin: 0px 8px;
+    padding: 30px 40px;
+
+    width: 750px;
+    height: 150px;
+
+    border-radius: 24px;
+    align-items: center;
+}
+
+.header-1_one_1{
+    display: flex;
+    gap: 530px;
+}
+
+.one-1{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.images-1{
+    width: 40px;
+    height: 50px;
+    
+    background-size: 24px 24px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; /*반복 안되게*/
+}
+.images-1.first {
+    background-image: url(/ui_test/images/loudspeaker.png);
+}
+
+.press-release{
+    display: flex;
+    background-color: #ffffff;
+    
+    justify-content: center;
+    
+    width: 70px;
+    line-height: 35px;
+    
+    border-radius: 10px;
+}
+.images-2{
+    width: 20px;
+    height: 50px;
+
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; /*반복 안되게*/
+}
+
+.images-2.first {
+    background-image: url(/ui_test/images/threeDots.png);
+}
+
+.content {
+    font-size: 30px;
+    display: flex;
+}
+.content:hover{
+    cursor: pointer;
+}
+
+#header-2 {
+    width: 1712px;
+    height: 85px;
+
+    display: flex;
+
+    position: fixed;
+    z-index: 9999;
+
+    gap: 15px;
+}
+
+.header-2{
+    background-color: #f3f3f3;
+
+    margin: 230px 8px;
+    padding: 30px 40px;
+
+    width: 462.5px;
+    height: 75px;
+
+    border-radius: 24px;
+    align-items: center;
+}
+
+.header-2:hover{
+    cursor: pointer;
+}
+
+.header-2_one_1{
+    display: flex;
+    gap: 210px;
+    align-items: center;
+}
+
+.title1 {
+    margin: 20px;
+    width: 130px;
+    font-size: 30px;
+    display: flex;
+}
+.title2{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.go{
+    width: 55px;
+    font-size: 15px;
+    display: flex;
+}
+
+.link-button {
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+
+    background-color: black;
+}
