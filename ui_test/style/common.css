@@ -21,10 +21,14 @@ body {
 
     display: flex;
     gap: 15px;
+
+    justify-content: space-between;
+    
 }
 
 .header-1{
     background-color: #f3f3f3;
+
 
     margin: 0px 8px;
     padding: 30px 40px;
@@ -34,11 +38,13 @@ body {
 
     border-radius: 24px;
     align-items: center;
+
 }
 
 .header-1_one_1{
     display: flex;
-    gap: 530px;
+    justify-content: space-between;
+    /* gap: 530px; */
 }
 
 .one-1{
